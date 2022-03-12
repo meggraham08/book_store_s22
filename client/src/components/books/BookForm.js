@@ -39,6 +39,8 @@ const BookForm = ({ addBook }) => {
           required
         />
         <button type="submit">Submit</button>
+        {/* <button deleteBook >Delete</button> */}
+
       </form>
     </>
   )

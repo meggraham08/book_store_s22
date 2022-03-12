@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import BookForm from './BookForm'
-
+import BookList from './BookList';
 
 const Books = () => {
   const [books, setBooks] = useState([])
@@ -48,7 +48,12 @@ const Books = () => {
   return(
     <>
       <h1>Books</h1>
-      <BookForm addBook={addBook} />
+      <BookForm addBook={addBook}/>
+      <BookList 
+      books={books}
+      deleteBook={deleteBook}
+      updateBook={updateBook}/>
+
     </>
   )
 }
